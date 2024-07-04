@@ -24,7 +24,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>University of Ruhuna Faculty of Engineering</li>
-        <li>St. Michael's College National School, Batticaloa</li>
+        <li>St. Michael&apos;s College National School, Batticaloa</li>
       </ul>
     ),
   },
@@ -33,8 +33,8 @@ const TAB_DATA = [
     id: "contact",
     content: (
       <ul className="list-disc pl-2">
-        <li>Email : sjanugopan@gmail.com</li>
-        <li>Phone : 0754164532</li>
+        <li>Email: sjanugopan@gmail.com</li>
+        <li>Phone: 0754164532</li>
       </ul>
     ),
   },
@@ -53,13 +53,18 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image-2.png" width={500} height={500} />
+        <Image
+          src="/images/about-image-2.png"
+          width={500}
+          height={500}
+          alt="About image"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg text-left">
             I am Sundaramoorthy Janugopan, 3rd year Computer Engineering
-            Undergraduate in University of Ruhuna Faculty of Engineering. I am a
-            motivated undergraduate student with foundational knowledge in
+            Undergraduate at the University of Ruhuna Faculty of Engineering. I
+            am a motivated undergraduate student with foundational knowledge in
             backend development using Spring Boot. Familiar with front-end
             development using React and mobile application development with
             Flutter. Basic experience in database management with MySQL.
@@ -72,22 +77,19 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("contact")}
               active={tab === "contact"}
             >
-              {" "}
-              Contact{" "}
+              Contact
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              {" "}
-              Skills{" "}
+              Skills
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              {" "}
-              Education{" "}
+              Education
             </TabButton>
           </div>
           <div className="mt-8">
